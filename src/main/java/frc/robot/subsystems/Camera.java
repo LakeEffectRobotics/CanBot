@@ -16,6 +16,7 @@ public class Camera extends SubsystemBase {
 
 
     //camera values
+    // TODO: add networktable entry for whether or not the camera has a lock
     private int maxHistoryLen = 32;
     private int x = 0;
     private int[] xHist = new int[maxHistoryLen];
@@ -29,11 +30,13 @@ public class Camera extends SubsystemBase {
     private int[] heightHist = new int[maxHistoryLen];
     private int pushI = 0;
 
+    // TODO: fix shuffleboard entries
     private GenericEntry XShuffle;
     private GenericEntry YShuffle;
     private GenericEntry AgeShuffle;
     private GenericEntry WidthShuffle;
     private GenericEntry HeightShuffle;
+    private GenericEntry AutoMoveDirectionShuffle;
     public ShuffleboardTab tab = Shuffleboard.getTab("my least favourite tab");
 
     // camera subsystem here
@@ -58,6 +61,10 @@ public class Camera extends SubsystemBase {
         HeightShuffle = tab
             .add ("cameraHeight", height)
             .withPosition (3, 0)
+            .getEntry();
+        AutoMoveDirectionShuffle = tab
+            .add ("moving", "null")
+            .withPosition (5, 0)
             .getEntry();
     }
     // //TODO: make this not horrible (get values directly as int)

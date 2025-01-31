@@ -26,19 +26,19 @@ public class DriveCommand extends Command {
   // Called when the command is initially scheduled.
   @Override
   public void initialize() {
-    drivetrain.drive(0, 0);
+    drivetrain.setOutput(0, 0);
   }
 
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    drivetrain.drive(leftSpeed.getAsDouble(), rightSpeed.getAsDouble());
+    drivetrain.setOutput(leftSpeed.getAsDouble(), rightSpeed.getAsDouble());
   }
 
   // Called once the command ends or is interrupted.
   @Override
   public void end(boolean interrupted) {
-    drivetrain.drive(0, 0);
+    drivetrain.setOutput(0, 0);
   }
 
   // Returns true when the command should end.

@@ -25,7 +25,7 @@ public class Drivetrain extends SubsystemBase {
     // This method will be called once per scheduler run
   }
 
-  public void drive(double leftSpeed, double rightSpeed){
+  public void setOutput(double leftSpeed, double rightSpeed){
     leftLead.set(ControlMode.PercentOutput, leftSpeed);
     rightLead.set(ControlMode.PercentOutput, rightSpeed);
   }

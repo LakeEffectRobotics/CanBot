@@ -13,7 +13,8 @@ import edu.wpi.first.wpilibj2.command.button.Trigger;
 /* IMPORT SUBSYSTEMS */
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.subsystems.Camera;
-
+import frc.robot.subsystems.Crusher;
+import frc.robot.commands.CrushDefaultCommand;
 /* IMPORT COMMANDS */
 import frc.robot.commands.DriveCommand;
 
@@ -26,7 +27,7 @@ public class RobotContainer {
   private final Drivetrain drivetrain = new Drivetrain(RobotMap.leftDrive1, RobotMap.rightDrive1);
   private final Camera camera = new Camera();
 
-
+  public final Crusher crusher = new Crusher(RobotMap.crusherMotor);
 
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
@@ -35,6 +36,7 @@ public class RobotContainer {
     configureBindings();
 
     drivetrain.setDefaultCommand(new DriveCommand(drivetrain, OI.leftDriveSupplier, OI.rightDriveSupplier));
+    crusher.setDefaultCommand(new CrushDefaultCommand(crusher));
   }
 
   /**

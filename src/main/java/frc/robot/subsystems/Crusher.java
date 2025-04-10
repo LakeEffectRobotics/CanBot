@@ -7,6 +7,7 @@ package frc.robot.subsystems;
 import com.ctre.phoenix.motorcontrol.ControlMode;
 import com.ctre.phoenix.motorcontrol.TalonSRXSimCollection;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 import edu.wpi.first.epilogue.Logged;
 import edu.wpi.first.epilogue.Logged.Strategy;
@@ -22,10 +23,11 @@ import frc.robot.Robot;
 @Logged(strategy = Strategy.OPT_IN)
 public class Crusher extends SubsystemBase {
   
-  TalonSRX talon;
+  // Use WPI_TalonSRX for better simulation support
+  WPI_TalonSRX talon;
 
   // 12.75:1 Gearbox, 4:1 belt reduction to flywheel
-  private static final double GEAR_REDUCTION = 12.75 * 2;
+  private static final double GEAR_REDUCTION = 12.75;
   // 11cm ID to 15cm OD radius ring, 20lbs
   private static final double MOMENT_OF_INERTIA = 0.5 * Units.lbsToKilograms(20) * (0.11 * 0.11 + 0.15 * 0.15);
   
@@ -34,7 +36,7 @@ public class Crusher extends SubsystemBase {
   TalonSRXSimCollection simTalon;
 
   /** Creates a new Crusher. */
-  public Crusher(TalonSRX talon) {
+  public Crusher(WPI_TalonSRX talon) {
     this.talon = talon;
     if (Robot.isSimulation()){
       simTalon = talon.getSimCollection();

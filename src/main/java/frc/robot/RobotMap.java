@@ -3,6 +3,7 @@ package frc.robot;
 import com.ctre.phoenix.motorcontrol.can.BaseMotorController;
 import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
+import com.ctre.phoenix.motorcontrol.can.WPI_TalonSRX;
 
 public class RobotMap {
 
@@ -18,7 +19,7 @@ public class RobotMap {
     public static final BaseMotorController rightDrive1;
     public static final BaseMotorController rightDrive2;
 
-    public static final TalonSRX crusherMotor;
+    public static final WPI_TalonSRX crusherMotor;
 
     static {
         leftDrive1 = new VictorSPX(LEFT_DRIVE_1);
@@ -29,6 +30,6 @@ public class RobotMap {
         rightDrive2 = new VictorSPX(RIGHT_DRIVE_2);
         rightDrive2.follow(rightDrive1);
 
-        crusherMotor = new TalonSRX(CRUSHER_MOTOR);
+        crusherMotor = new WPI_TalonSRX(CRUSHER_MOTOR);
     }
 }

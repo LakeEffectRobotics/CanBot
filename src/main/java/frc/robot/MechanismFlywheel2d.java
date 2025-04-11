@@ -40,9 +40,13 @@ public class MechanismFlywheel2d extends MechanismObject2d {
         this.RPM = RPM;
     }
 
+    public synchronized double getAccumulatedAngle() {
+        return currentAngle;
+    }
+
     public void update(){
         long time = System.currentTimeMillis();
-        currentAngle += RPM * 360 * (time - lastUpdate) / 60;
+        currentAngle += RPM * 360 * (time - lastUpdate) / 1000 / 60;
         lastUpdate = time;
 
         

@@ -35,12 +35,21 @@ public class Crusher extends SubsystemBase {
   FlywheelSim flywheel = new FlywheelSim(sys, DCMotor.getCIM(1));
   TalonSRXSimCollection simTalon;
 
+  Mechanism2d display = new Mechanism2d(3, 3);
+  MechanismFlywheel2d flywheelDisplay;
+
   /** Creates a new Crusher. */
   public Crusher(WPI_TalonSRX talon) {
     this.talon = talon;
     if (Robot.isSimulation()){
       simTalon = talon.getSimCollection();
     }
+
+    MechanismRoot2d root = display.getRoot("Flywheel Root", 1.5, 1.5);
+    flywheelDisplay = new MechanismFlywheel2d("Flywheel", 0.15, 6);
+    root.append(flywheelDisplay);
+
+    SmartDashboard.putData("Flywheel", display);
   }
 
   public void setOutput(double output){
@@ -68,5 +77,8 @@ public class Crusher extends SubsystemBase {
     flywheel.setInputVoltage(simTalon.getMotorOutputLeadVoltage());
     flywheel.update(0.02);
     simTalon.setStatorCurrent(flywheel.getCurrentDrawAmps());
+
+    flywheelDisplay.update();
+    flywheelDisplay.setRPM(flywheel.getAngularVelocityRPM());
   }
 }

@@ -11,21 +11,14 @@ import edu.wpi.first.wpilibj2.command.button.Trigger;
 
 /* IMPORT SUBSYSTEMS */
 import frc.robot.subsystems.Drivetrain;
-import frc.robot.subsystems.Camera;
 
 /* IMPORT COMMANDS */
 import frc.robot.commands.DriveCommand;
-
-import frc.robot.commands.auto.DriveTowardsRing;
 
 public class RobotContainer {
 
   /** CREATE SUBSYSTEMS */
   private final Drivetrain drivetrain = new Drivetrain(RobotMap.leftDrive1, RobotMap.rightDrive1);
-  private final Camera camera = new Camera();
-
-
-
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
@@ -54,7 +47,6 @@ public class RobotContainer {
    * @return the command to run in autonomous
    */
   public Command getAutonomousCommand() {
-    // An example command will be run in autonomous
-    return new DriveTowardsRing(drivetrain, camera);
+    return null;
   }
 }

@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj2.command.Command;
 
 import frc.robot.subsystems.Drivetrain;
 import frc.robot.commands.DriveCommand;
+import frc.robot.commands.auto.DriveAuto;
 
 /**
  * Creates and connects the robot's subsystems, commands, and operator controls.
@@ -42,9 +43,9 @@ public class RobotContainer {
   /**
    * Returns the command that should run during autonomous mode.
    *
-   * @return a command to run, or {@code null} when the robot should remain stopped
+   * @return the timed drivetrain command
    */
   public Command getAutonomousCommand() {
-    return null;
+    return new DriveAuto(drivetrain);
   }
 }

@@ -1,0 +1,278 @@
+---
+query: "[Drivetrain.java](file:///Users/gbuckholtz/git/robots2026/FRC/CanBot/src/mai\
+  n/java/frc/robot/subsystems/Drivetrain.java)
+  [Constants.java](file:///Users/gbuckholtz/git/robots2026/FRC/CanBot/src/main/\
+  java/frc/robot/Constants.java)
+  [Main.java](file:///Users/gbuckholtz/git/robots2026/FRC/CanBot/src/main/java/\
+  frc/robot/Main.java)
+  [OI.java](file:///Users/gbuckholtz/git/robots2026/FRC/CanBot/src/main/java/fr\
+  c/robot/OI.java)
+  [Robot.java](file:///Users/gbuckholtz/git/robots2026/FRC/CanBot/src/main/java\
+  /frc/robot/Robot.java)
+  [DriveCommand.java](file:///Users/gbuckholtz/git/robots2026/FRC/CanBot/src/ma\
+  in/java/frc/robot/commands/DriveCommand.java)
+  [RobotContainer.java](file:///Users/gbuckholtz/git/robots2026/FRC/CanBot/src/\
+  main/java/frc/robot/RobotContainer.java)
+  [RobotMap.java](file:///Users/gbuckholtz/git/robots2026/FRC/CanBot/src/main/j\
+  ava/frc/robot/RobotMap.java) "
+references:
+  - "File: /src/main/java/frc/robot/subsystems/Drivetrain.java"
+  - "File: /src/main/java/frc/robot/Constants.java"
+  - "File: /src/main/java/frc/robot/Main.java"
+  - "File: /src/main/java/frc/robot/OI.java"
+  - "File: /src/main/java/frc/robot/Robot.java"
+  - "File: /src/main/java/frc/robot/RobotContainer.java"
+  - "File: /src/main/java/frc/robot/RobotMap.java"
+  - "File: /src/main/java/frc/robot/commands/DriveCommand.java"
+  - |+
+    Reference: <instructions>
+    Here is a list of instruction files that contain rules for working with this codebase.
+    These files are important for understanding the codebase structure, conventions, and best practices.
+    When an instruction file applies to your task (based on its description or applyTo pattern), follow the rules specified in it.
+    If the file content is not already included in the context, use the #tool:read/readFile tool to read it before proceeding. Use the exact value from the <file> element as-is with the tool; do not add or remove prefixes or otherwise modify it.
+    Only load instruction files when they are relevant to the current task. Do not eagerly load all instructions upfront.
+    When modifying or creating files, check for instructions whose applyTo pattern matches the file path and follow them.
+    <instruction>
+    <file>/Users/gbuckholtz/.vscode-insiders/extensions/vscjava.vscode-java-debug-0.60.2026110205/resources/instruments/javaDebugContext.instructions.md</file>
+    <description>Use when the user wants to run, launch, start, debug, verify, or step through a Java program (main class, Spring Boot, JAR, Maven, Gradle); or when inspecting variables, stack frames, threads, evaluating expressions, or managing breakpoints in a Java debug session.</description>
+    </instruction>
+    </instructions>
+
+
+    <skills>
+    Here is a list of skills that contain domain specific knowledge on a variety of topics.
+    Each skill comes with a description of the topic and a file path that contains the detailed instructions.
+    When a user asks you to perform a task that falls within the domain of a skill, use the #tool:read/readFile tool to acquire the full instructions from the file URI.
+    <skill>
+    <name>typescript-setup</name>
+    <description>How to set up a new TypeScript project</description>
+    <file>/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/extensions/TypeScriptTeam.jsts-chat-features/skills/typescript-setup/SKILL.md</file>
+    </skill>
+    <skill>
+    <name>typescript-update</name>
+    <description>Guidance for updating to the newer versions of TypeScript. Use this when you need to upgrade TypeScript or as part of a larger dependency update process.</description>
+    <file>/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/extensions/TypeScriptTeam.jsts-chat-features/skills/typescript-update/SKILL.md</file>
+    </skill>
+    <skill>
+    <name>agent-customization</name>
+    <description>**WORKFLOW SKILL** — Create, update, review, fix, or debug VS Code agent customization files (.instructions.md, .prompt.md, .agent.md, SKILL.md, copilot-instructions.md, AGENTS.md). USE FOR: saving coding preferences; troubleshooting why instructions/skills/agents are ignored or not invoked; configuring applyTo patterns; defining tool restrictions; creating custom agent modes or specialized workflows; packaging domain knowledge; fixing YAML frontmatter syntax. DO NOT USE FOR: general coding questions (use default agent); runtime debugging or error diagnosis; MCP server configuration (use MCP docs directly); VS Code extension development. INVOKES: file system tools (read/write customization files), ask-questions tool (interview user for requirements), subagents for codebase exploration. FOR SINGLE OPERATIONS: For quick YAML frontmatter fixes or creating a single file from a known pattern, edit the file directly — no skill needed.</description>
+    <file>/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/extensions/copilot/assets/prompts/skills/agent-customization/SKILL.md</file>
+    </skill>
+    <skill>
+    <name>chronicle</name>
+    <description>Analyze Copilot session history for standup reports, usage tips, session search, and session reindexing. Use when the user asks for a standup, daily summary, usage tips, workflow recommendations, wants to search or find past sessions by keyword/file/PR, wants to reindex their session store, or asks about deleting session data.</description>
+    <file>/Applications/Visual Studio Code - Insiders.app/Contents/Resources/app/extensions/copilot/assets/prompts/skills/chronicle/SKILL.md</file>
+    </skill>
+    <skill>
+    <name>python-fact-grounded-coding</name>
+    <description>Use when the user explicitly asks for the Python fact-grounded coding skill, or when a Python coding, debugging, explanation, or bug-fix task should be grounded in verified Pylance facts, runtime values, diagnostics, selected interpreter state, tests, or debugger evidence before changing code or reporting a conclusion.</description>
+    <file>/Users/gbuckholtz/.vscode-insiders/extensions/ms-python.vscode-pylance-2026.4.1/skills/python-fact-grounded-coding/SKILL.md</file>
+    </skill>
+    <skill>
+    <name>python-type-inference</name>
+    <description>Use when the user explicitly asks for the Python type inference skill, or when a task needs the single correct type for a specific Python symbol — a function return, parameter, module-level value, or class/instance field — and that type must be verified against real code rather than guessed. This is the shared core used by the type-annotation and stub-writing skills.</description>
+    <file>/Users/gbuckholtz/.vscode-insiders/extensions/ms-python.vscode-pylance-2026.4.1/skills/python-type-inference/SKILL.md</file>
+    </skill>
+    <skill>
+    <name>python-add-type-annotations</name>
+    <description>Use when the user explicitly asks for the Python type annotation skill, or when they want to make their own Python source type-safe by adding inline type annotations to one file, a set of files, or a package/workspace in bulk — annotating function return types, parameters, module-level and class-level variables/constants (including dataclass and similar fields), validating diagnostics against a baseline, and reporting newly surfaced type errors.</description>
+    <file>/Users/gbuckholtz/.vscode-insiders/extensions/ms-python.vscode-pylance-2026.4.1/skills/python-add-type-annotations/SKILL.md</file>
+    </skill>
+    <skill>
+    <name>python-write-stubs</name>
+    <description>Use when the user explicitly asks for the Python stub-writing skill, wants to create or improve `.pyi` type stubs for a third-party Python package, or needs partial stubs under a workspace `typings/` directory without modifying installed package source. Generates stubs through Pylance, resolves uncertain types with the Python type-inference skill, and validates public API, diagnostics, runtime compatibility, and type completeness.</description>
+    <file>/Users/gbuckholtz/.vscode-insiders/extensions/ms-python.vscode-pylance-2026.4.1/skills/python-write-stubs/SKILL.md</file>
+    </skill>
+    <skill>
+    <name>pylance-docs</name>
+    <description>Use when the user explicitly asks for the Pylance docs skill, or when an answer depends on current official Pylance documentation for settings, diagnostics, configuration, troubleshooting, feature behavior, or supported workflows.</description>
+    <file>/Users/gbuckholtz/.vscode-insiders/extensions/ms-python.vscode-pylance-2026.4.1/skills/pylance-docs/SKILL.md</file>
+    </skill>
+    <skill>
+    <name>pylance-refactoring</name>
+    <description>Use when the user explicitly asks for the Pylance refactoring skill, or when they want named automated Python refactorings applied to one file, many files, a workspace, a folder subset, or a composed cleanup workflow such as workspace-wide unused-import cleanup, wildcard-import conversion followed by unused-import cleanup, inferred type annotations, or Pylance fix-all.</description>
+    <file>/Users/gbuckholtz/.vscode-insiders/extensions/ms-python.vscode-pylance-2026.4.1/skills/pylance-refactoring/SKILL.md</file>
+    </skill>
+    <skill>
+    <name>pylance-python-profiling</name>
+    <description>Use when the user wants to profile Python code with Pylance: capture CPU time (Tachyon), trace calls (sys.monitoring), or memory (Memray); profile a whole run or a specific region between two source locations; add sub-region markers; and explore the resulting profile (hot functions, call trees, time slices). Also use for the 3.15+ interpreter requirement and related error guidance.</description>
+    <file>/Users/gbuckholtz/.vscode-insiders/extensions/ms-python.vscode-pylance-2026.4.1/skills/pylance-python-profiling/SKILL.md</file>
+    </skill>
+    <skill>
+    <name>add-python-version-support</name>
+    <description>Guide changes required when a project adds a newer Python version above its current tested ceiling while preserving its existing minimum. Use when asked to support, test, certify, or prepare for a newer Python release at the upper end of the support range without dropping existing runtimes.</description>
+    <file>/Users/gbuckholtz/.vscode-insiders/extensions/ms-python.vscode-pylance-2026.4.1/skills/add-python-version-support/SKILL.md</file>
+    </skill>
+    <skill>
+    <name>drop-python-version-support</name>
+    <description>Guide changes required when a project drops one or more oldest supported Python versions and raises its minimum supported version. Use when asked to remove the oldest supported runtimes, raise the minimum Python requirement, modernize code after raising the Python floor, or upgrade/migrate by replacing older runtimes.</description>
+    <file>/Users/gbuckholtz/.vscode-insiders/extensions/ms-python.vscode-pylance-2026.4.1/skills/drop-python-version-support/SKILL.md</file>
+    </skill>
+    <skill>
+    <name>microsoft-365-agents-toolkit</name>
+    <description>Builds, tests, and deploys Microsoft 365 apps and agents for Teams and Copilot. Delegates all Declarative Agent workflows to the WIQD plugin except TypeSpec DA projects, which use ATK. Uses ATK for Custom Engine Agents, Teams bots, tabs, message extensions, Agents Playground, and Teams runtime testing. USE FOR: Declarative Agents, Custom Engine Agents, Teams apps, local testing, deployment, troubleshooting, and Slack-to-Teams migration. DO NOT USE FOR: general web development or non-Microsoft-365 projects.</description>
+    <file>/Users/gbuckholtz/.vscode-insiders/extensions/teamsdevapp.ms-teams-vscode-extension-6.21.2026111105/skills/microsoft-365-agents-toolkit/SKILL.md</file>
+    </skill>
+    <skill>
+    <name>java-launch-troubleshooting</name>
+    <description>Use when the user wants to run, launch, start, restart, or stop a Java program (main class, Spring Boot, JAR, Maven, Gradle), or diagnose launch failures (mainClass missing, classpath unresolved, compile failure, "project not detected", `ClassNotFoundException` at startup). NOT for inspecting variables, stepping, or setting breakpoints in an already-running debug session — use `java-debug-inspection` for that.</description>
+    <file>/Users/gbuckholtz/.vscode-insiders/extensions/vscjava.vscode-java-debug-0.60.2026110205/resources/skills/java-launch-troubleshooting/SKILL.md</file>
+    </skill>
+    </skills>
+
+
+    <agents>
+    Here is a list of agents that can be used when running a subagent.
+    Each agent has optionally a description with the agent's purpose and expertise. When asked to run a subagent, choose the most appropriate agent from this list.
+    Use the #tool:agent/runSubagent tool with the agent name to run the subagent.
+    <agent>
+    <name>AzqrCostOptimizeAgent</name>
+    <description>You are an Azure Cost Optimization Agent. Your mission is to identify, quantify, and recommend cost savings across an Azure subscription.</description>
+    </agent>
+    <agent>
+    <name>AzureCostOptimizeAgent</name>
+    <description>You are an Azure Cost Optimization Agent. Your mission is to identify, quantify, and recommend cost savings across an Azure subscription.</description>
+    </agent>
+    <agent>
+    <name>MCP AppService Builder</name>
+    <description>Plan, scaffold, extend, and deploy .NET 10 MCP App Service MCP servers with azd/Bicep and RBAC</description>
+    <argumentHint>Describe the MCP server, tools to add, and your Azure subscription/resource group/location</argumentHint>
+    </agent>
+    <agent>
+    <name>Azure IaC Exporter</name>
+    <description>Export existing Azure resources to Infrastructure as Code templates via Azure Resource Graph analysis, Azure Resource Manager API calls, and azure-iac-generator integration. Use this skill when the user asks to export, convert, migrate, or extract existing Azure resources to IaC templates (Bicep, ARM Templates, Terraform, Pulumi).</description>
+    <argumentHint>Specify which IaC format you want (Bicep, ARM, Terraform, Pulumi) and provide Azure resource details</argumentHint>
+    </agent>
+    <agent>
+    <name>Azure IaC Generator</name>
+    <description>Central hub for generating Infrastructure as Code (Bicep, ARM, Terraform, Pulumi) with format-specific validation and best practices. Use this skill when the user asks to generate, create, write, or build infrastructure code, deployment code, or IaC templates in any format (Bicep, ARM Templates, Terraform, Pulumi).</description>
+    <argumentHint>Describe your infrastructure requirements and preferred IaC format. Can receive handoffs from export/migration agents.</argumentHint>
+    </agent>
+    <agent>
+    <name>DeployToAzure</name>
+    <description>Custom agent focusing on deploying Azure resources</description>
+    </agent>
+    <agent>
+    <name>Azure_function_codegen_and_deployment</name>
+    <description>Generate and deploy Azure Functions with comprehensive planning, code generation, and deployment automation.</description>
+    </agent>
+    <agent>
+    <name>Azure_Static_Web_App</name>
+    <description>Custom agent for creating and deploying Azure Static Web Apps</description>
+    </agent>
+    <agent>
+    <name>LambdaToFunctionMigration</name>
+    <description>Custom agent for migrating AWS Lambda to Azure Function</description>
+    </agent>
+    <agent>
+    <name>azure-project-plan</name>
+    <description>Plan and design a NEW Azure-centric project the user asks to build — gather requirements interactively, produce an approved `.azure/project-plan.md`, then hand off to the `azure-project-scaffold` agent for execution. Use this for EVERY "build/create/make me an app" request, including frontend-only, static, single-page, and offline tools with no backend, no database, and no Azure services. WHEN "plan project", "design app", "new project", "project requirements", "create project plan", "plan my app", "what should I build", "new Azure app", "create testable app", "new API project", "full-stack Azure app", "bootstrap project", "new fullstack project", "create functions project", "build me an app", "make me a web app", "create a website", "simple web app", "little frontend tool", "static site", "frontend only app", "no backend app", "React app", "Vue app", "dashboard app", "Express API", "background worker", "multi-service app".</description>
+    </agent>
+    <agent>
+    <name>azure-project-scaffold</name>
+    <description>Scaffold a NEW Azure-centric project from an ALREADY-APPROVED `.azure/project-plan.md` — generate the frontend, backend services, database, and API routes. Does NOT gather requirements or write the plan; that is the `azure-project-plan` agent's job.</description>
+    </agent>
+    <agent>
+    <name>azure-project-integrate</name>
+    <description>Integrate a freshly scaffolded Azure-centric project — create the SQL/PostgreSQL schema migrations (NO seed data), smoke-test the backend so every endpoint responds, wire the frontend to LIVE backend data (replace all mock data), and run the frontend and backend wired together end-to-end. Runs after `azure-project-scaffold`. WHEN "integrate project", "wire to live data", "remove mock data", "smoke test backend", "verify endpoints", "create migrations", "wire frontend and backend", "integrate scaffold", "make the app run".</description>
+    </agent>
+    <agent>
+    <name>azure-debug-plan</name>
+    <description>Scan an Azure-centric workspace project. Classify its services and dependencies, and produce a local debugging plan covering automated emulator startup, VS Code launch/task configs, and API tests.</description>
+    </agent>
+    <agent>
+    <name>azure-debug-generate</name>
+    <description>Generate artifacts for an approved VS Code debugging plan. Responsible for generating docker-compose, VS Code launch/tasks, and emulator orchestration for streamlined project debugging.</description>
+    </agent>
+    <agent>
+    <name>azure-deploy</name>
+    <description>Onboard and deploy an Azure-centric project end-to-end using a guided, self-contained onboarding pipeline. Analyzes deployment readiness, selects Azure services and SKUs, estimates cost, validates quota, generates secure Bicep/Terraform, provisions resources, deploys application code, and verifies health. Run after local development is set up. WHEN: deploy to Azure, ship to Azure, host on Azure, create infrastructure, generate IaC, provision resources, go live.</description>
+    </agent>
+    <agent>
+    <name>Explore</name>
+    <description>Fast read-only codebase exploration and Q&amp;A subagent. Prefer over manually chaining multiple search and file-reading operations to avoid cluttering the main conversation. Safe to call in parallel. Specify thoroughness: quick, medium, or thorough.</description>
+    <argumentHint>Describe WHAT you're looking for and desired thoroughness (quick/medium/thorough)</argumentHint>
+    </agent>
+    </agents>
+
+generationTime: 2026-11-22T00:07:43.030Z
+---
+classDiagram
+    class Main {
+        +main(args)
+    }
+
+    class Robot {
+        -Command m_autonomousCommand
+        -RobotContainer m_robotContainer
+        +robotInit()
+        +robotPeriodic()
+        +autonomousInit()
+        +teleopInit()
+        +testInit()
+    }
+
+    class RobotContainer {
+        -Drivetrain drivetrain
+        +getAutonomousCommand() Command
+        -configureBindings()
+    }
+
+    class Drivetrain {
+        -BaseMotorController leftLead
+        -BaseMotorController rightLead
+        +setOutput(leftSpeed, rightSpeed)
+        +periodic()
+    }
+
+    class DriveCommand {
+        -Drivetrain drivetrain
+        -DoubleSupplier leftSpeed
+        -DoubleSupplier rightSpeed
+        +initialize()
+        +execute()
+        +end(interrupted)
+        +isFinished() boolean
+    }
+
+    class OI {
+        +XboxController controller$
+        +DoubleSupplier leftDriveSupplier$
+        +DoubleSupplier rightDriveSupplier$
+    }
+
+    class Constants {
+    }
+
+    class OperatorConstants {
+        +int kDriverControllerPort$
+    }
+
+    class RobotMap {
+        +BaseMotorController leftDrive1$
+        +BaseMotorController leftDrive2$
+        +BaseMotorController rightDrive1$
+        +BaseMotorController rightDrive2$
+    }
+
+    class BaseMotorController
+    class VictorSPX
+    class Command
+    class SubsystemBase
+    class TimedRobot
+    class RobotBase
+
+    Main ..> RobotBase : starts Robot
+    Robot ..|> TimedRobot
+    Robot *-- RobotContainer
+    RobotContainer *-- Drivetrain
+    RobotContainer ..> DriveCommand : sets default
+    RobotContainer ..> RobotMap : gets lead motors
+    RobotContainer ..> OI : gets suppliers
+    DriveCommand --|> Command
+    DriveCommand ..> Drivetrain : controls
+    Drivetrain --|> SubsystemBase
+    Drivetrain --> BaseMotorController : controls leads
+    RobotMap ..> VictorSPX : creates
+    RobotMap --> BaseMotorController : configures followers
+    Constants *-- OperatorConstants

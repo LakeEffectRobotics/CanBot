@@ -9,12 +9,19 @@ import java.util.function.DoubleSupplier;
 import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.subsystems.Drivetrain;
 
+/**
+ * Reads the controller joysticks and sends their values to the drivetrain.
+ *
+ * <p>A DoubleSupplier is a method that returns a double when its
+ * {@code getAsDouble()} method is called. The suppliers in {@link frc.robot.OI}
+ * read the controller each time the command executes.
+ */
 public class DriveCommand extends Command {
 
   private Drivetrain drivetrain;
   private DoubleSupplier leftSpeed, rightSpeed;
 
-  /** Creates a new DriveCommand. */
+  /** Creates a drive command that uses one drivetrain and two joystick suppliers. */
   public DriveCommand(Drivetrain drivetrain, DoubleSupplier leftSpeed, DoubleSupplier rightSpeed) {
     // Use addRequirements() here to declare subsystem dependencies.
     addRequirements(drivetrain);

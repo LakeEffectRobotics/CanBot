@@ -3,9 +3,12 @@ package frc.robot;
 import com.ctre.phoenix.motorcontrol.can.BaseMotorController;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 
-import edu.wpi.first.wpilibj.motorcontrol.MotorController;
-import edu.wpi.first.wpilibj.motorcontrol.VictorSP;
-
+/**
+ * Maps motor controller CAN IDs and configures motors that follow lead motors.
+ *
+ * <p>Robot hardware values belong here instead of inside commands or subsystems.
+ * The drivetrain uses only the lead motors; IDs 3 and 2 mirror their lead motors.
+ */
 public class RobotMap {
 
     private static final int LEFT_DRIVE_1 = 4;

@@ -5,46 +5,44 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj2.command.Command;
-import edu.wpi.first.wpilibj2.command.Commands;
-import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
-import edu.wpi.first.wpilibj2.command.button.Trigger;
 
-/* IMPORT SUBSYSTEMS */
 import frc.robot.subsystems.Drivetrain;
-
-/* IMPORT COMMANDS */
 import frc.robot.commands.DriveCommand;
 
+/**
+ * Creates and connects the robot's subsystems, commands, and operator controls.
+ *
+ * <p>A subsystem represents a physical part of the robot, such as the drivetrain.
+ * A command describes behavior that uses one or more subsystems. This class
+ * connects those pieces when the robot starts.
+ */
 public class RobotContainer {
 
-  /** CREATE SUBSYSTEMS */
+  // Create the drivetrain subsystem once. RobotMap supplies the motor controllers.
   private final Drivetrain drivetrain = new Drivetrain(RobotMap.leftDrive1, RobotMap.rightDrive1);
 
-  /** The container for the robot. Contains subsystems, OI devices, and commands. */
+  /** Runs once when the robot program starts. */
   public RobotContainer() {
-    // Configure the trigger bindings
+    // Reserved for adding button and joystick bindings later.
     configureBindings();
 
+    // Run DriveCommand whenever no other command is controlling the drivetrain.
     drivetrain.setDefaultCommand(new DriveCommand(drivetrain, OI.leftDriveSupplier, OI.rightDriveSupplier));
   }
 
   /**
-   * Use this method to define your trigger->command mappings. Triggers can be created via the
-   * {@link Trigger#Trigger(java.util.function.BooleanSupplier)} constructor with an arbitrary
-   * predicate, or via the named factories in {@link
-   * edu.wpi.first.wpilibj2.command.button.CommandGenericHID}'s subclasses for {@link
-   * CommandXboxController Xbox}/{@link edu.wpi.first.wpilibj2.command.button.CommandPS4Controller
-   * PS4} controllers or {@link edu.wpi.first.wpilibj2.command.button.CommandJoystick Flight
-   * joysticks}.
+   * Add controller button actions here.
+   *
+   * <p>A binding maps a controller event, such as pressing a button, to a command.
    */
   private void configureBindings() {
-    // Schedule `ExampleCommand` when `exampleCondition` changes to `true`
-    
+    // Example: OI.controller.a().onTrue(new MyCommand(drivetrain));
   }
 
   /**
-   * Use this to pass the autonomous command to the main {@link Robot} class.
-   * @return the command to run in autonomous
+   * Returns the command that should run during autonomous mode.
+   *
+   * @return a command to run, or {@code null} when the robot should remain stopped
    */
   public Command getAutonomousCommand() {
     return null;
